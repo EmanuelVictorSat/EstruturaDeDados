@@ -4,10 +4,13 @@
 
 ## Conteúdos e Atividades
 
-**Queue** | 01-queue |Exercícios práticos de Filas (FIFO) |
-**Listas** | 02-lists | Implementação e exercícios sobre Listas Encadeadas / Sequencial
-**Pilhas** | 03-stack | Exercícios práticos de Pilhas |
-**Hashing** |04-hashing | Tabela Hash, funções de espalhamento e tratamento de colisões. |
+**Queue** Exercícios práticos de Filas (FIFO)
+
+**Listas** Implementação e exercícios sobre Listas Encadeadas / Sequencial
+
+**Pilhas** Exercícios práticos de Pilhas 
+
+**Hashing** Tabela Hash, funções de espalhamento e tratamento de colisões. 
 
 ---
 
