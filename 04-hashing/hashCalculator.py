@@ -3,11 +3,10 @@ def hash_code(key, listSize):
     hash = key % listSize
     return hash
 def registrationHashCalculator(registration, size):
-    n = str(registration)
-    d = int(n[-2])
-    u = int(n[-1])
-    
-    key = d + u
+    register = str(registration)
+    u = register[-1]
+    d = register[-2]
+    key = int(d+u)
     return key % size
 
 def identifyColisions(keys, size):
