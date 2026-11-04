@@ -8,7 +8,6 @@ def registrationHashCalculator(registration, size):
     d = register[-2]
     key = int(d+u)
     return key % size
-
 def identifyColisions(keys, size):
     table = [None] * size
     for i in keys:
@@ -31,3 +30,4 @@ class Table:
         else:
             return f"Colided keys: {self._table[position]} and {key}"
         return self._table
+    
