@@ -32,17 +32,20 @@ class Table:
         greatterBucket = 0
         #Elements
         for i in self._table:
-            if i is not None:
                 for j in i:
                     elements += 1
         #Not free buckets
+        j = 0
         for i in self._table:
-            if i != None:
+            if len(self._table[j])>0:
                 notFreeBuckets += 1
+            j += 1
         #Free bucket
+        k = 0
         for i in self._table:
-            if i == None:
+            if len(self._table[k]) == 0:
                 freeBuckets += 1
+            k += 1
         #Greatter Bucket
         buckets = []
         for i in self._table:
@@ -54,4 +57,4 @@ class Table:
             if buckets[i] >= greatterBucket:
                 greatterBucket = i
         #Each result
-        return f"Elements: {elements}\nNot free buckets: {notFreeBuckets}\nFree buckets: {freeBuckets}\nGreatter bucket: Bucket number: {greatterBucket}"
+        return f"Elements: {elements}\nNot free buckets: {notFreeBuckets}\nFree buckets: {freeBuckets}\nGreatter bucket: Bucket number: {greatterBucket} have {buckets[greatterBucket]} elements"
