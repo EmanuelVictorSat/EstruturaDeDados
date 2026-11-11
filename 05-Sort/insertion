@@ -1,0 +1,11 @@
+def insertionSort(table):
+    for i in range(len(table)):
+        element = table[i]
+        elementB4 = table[i - 1]
+        walking = i
+        while walking >= 0:
+            if (i - 1) >= 0:
+                if element < elementB4:
+                    table[i-1] = element
+                    table[i] = elementB4
+            walking -= 1

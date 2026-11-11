@@ -58,3 +58,10 @@ class Table:
                 greatterBucket = i
         #Each result
         return f"Elements: {elements}\nNot free buckets: {notFreeBuckets}\nFree buckets: {freeBuckets}\nGreatter bucket: Bucket number: {greatterBucket} have {buckets[greatterBucket]} elements"
+    def loadFactor(self):
+        elements = 0
+        position = len(self._table)
+        for i in self._table:
+            for j in i:
+                elements += 1
+        return elements // position
