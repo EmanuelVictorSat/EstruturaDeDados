@@ -21,7 +21,7 @@ array1 = sorted([random.randint(1,100) for i in range(15)])
 array2 = sorted([random.randint(1,100) for i in range(32)])
 array3 = sorted([random.randint(1,100) for i in range(50)])
 
-'''print(binarySearch(17, array1))
+print(binarySearch(17, array1))
 print(binarySearch(6, array1))
 print(binarySearch(25, array1))
 print(binarySearch(43, array2))
@@ -29,19 +29,19 @@ print(binarySearch(45, array2))
 print(binarySearch(98, array2))
 print(binarySearch(18, array3))
 print(binarySearch(11, array3))
-print(binarySearch(16, array3))'''
+print(binarySearch(16, array3))
 
 def bynariComparing(k, t):
     start = 0
-    hi = len(t) - 1
+    stop = len(t) - 1
     comp = 0
-    while start <= hi:
-        mid = (start + hi) // 2
+    while start <= stop:
+        mid = (start + stop) // 2
         if t[mid] == k:
             comp += 1
             return f"Key at the {mid} idex\nComparisons needed: {comp}"
         elif t[mid] > k:
-            hi = mid - 1
+            stop = mid - 1
             comp += 1
         else:
             start = mid + 1
@@ -85,3 +85,20 @@ records = [
     "Eduarda", "Felipe", "Gabriela"
 ]
 print(findRegister(70, keys, records))
+
+def findFirst(key, table):
+    start = 0
+    stop = len(table) - 1
+    first = -1
+    while start <= stop:
+        mid = (start + stop) // 2
+        if table[mid] == key:
+            first = mid
+            stop = mid - 1
+        elif table[mid] > key:
+            stop = mid - 1
+        else:
+            start = mid + 1
+    return first
+array = [1,1,1,1,1,1,1,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6]
+print(findFirst(1, array))
